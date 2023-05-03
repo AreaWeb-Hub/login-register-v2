@@ -34,7 +34,7 @@
                 <input type="password" class="form-control" id="password" placeholder="********">
             </div>
             <div class="mb-3">
-                <label for="password_confirmation" class="form-label">Пароль</label>
+                <label for="password_confirmation" class="form-label">Подтверждение</label>
                 <input type="password" class="form-control" id="password_confirmation" placeholder="********">
             </div>
             <div class="mb-3 d-flex align-items-center justify-content-between">
