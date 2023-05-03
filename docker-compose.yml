@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: somecode
+      MYSQL_USER: somecode
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+  web:
+    build: ./docker/php
+    depends_on:
+      - mysql
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "8000:80"
+    stdin_open: true
+    tty: true
